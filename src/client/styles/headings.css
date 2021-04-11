@@ -1,5 +1,5 @@
 h1 {
-  font-size: 6vw;
+  font-size: 3vw;
   font-family: 'Lato', sans-serif;
   font-weight: normal;
   font-style: italic;
@@ -7,7 +7,7 @@ h1 {
 }
 
 h2 {
-  font-size: 5vw;
+  font-size: 2vw;
   font-family: 'Lato', sans-serif;
   text-align: center;
   text-decoration: underline;
@@ -20,13 +20,13 @@ h5 {
 
 @media (min-width:900px) {
   h1 {
-    font-size: 5vw;
+    font-size: 3vw;
     font-family: 'Lato', sans-serif;
     text-align: center;
   }
 
   h2 {
-    font-size: 4vw;
+    font-size: 2vw;
     font-family: 'Lato', sans-serif;
     text-align: center;
   }

@@ -106,7 +106,7 @@ img {
 @media (min-width:900px) {
   .container{
     display: grid;
-    grid-template-rows: 200px 1fr 200px;
+    grid-template-rows: 150px 1fr 100px;
     grid-template-areas:
     "hd hd hd hd"
     "c1 c1 c1 au"
