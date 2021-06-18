@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
       <title>Travel Journal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <link href="../styles/main.scss" rel="stylesheet"/>
+    <link href="../styles/main.css" rel="stylesheet"/>
   </head>
   <body>
   <div class = "container">
@@ -12,25 +12,28 @@
       <header class="title"><h1>My Travel Journal</h1></header>
     </div>
     <div class="box" id="one">
-      <article class="cover_photo"><img src="../media/travel_camper.jpg" alt="camper van on the Californian coast"></article>
+      <article class="cover_photo"><img src="" alt="camper van on the Californian coast"></article>
       <article class="cover_text"></article>
+      <div class ="location" id="zip" placeholder="enter zip code here"></div>
     </div>
-    <aside class="author" id="four"><h2>Trip details go here</h2>
-      <section class="info">
-        <ul>
-          <li id="name">list item</li>
-          <li id="company">list item</li>
-          <li id="country">list item</li>
-        </ul>
-      </section>
+    <aside class="box" id="tripname"><h2>Trip details go here</h2>
+      <div class ="trip">
+        <textarea class= "textbox" id="tripdetails" placeholder="Enter your trip here" rows="9" cols="50"></textarea>
+      </div>
+      <div class ="trip">
+        <div class = "weatherentry">Current weather</div>
+        <div id = "weather">
+          <div id = "date"></div>
+          <div id = "temp"></div>
+          <div id = "content"></div>
+        </div>
+      </div>
       <section class="bio">
-        <p> paragraph
-        </p>
-      </section>
+        <p> Something here</p>
       </section>
     </aside>
     <div class="box" id="footer"><a href="blog_homepage.html">Return to homepage</a></div>
   </div>
   </body>
-  <script src="D:\Programming Projects\Udacity\travel_app\dist\bundle.js"></script>
+  <!--script type="text/javascript" src="../../../dist/main.js"></script-->
 </html>
