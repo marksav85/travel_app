@@ -1,11 +1,12 @@
-@import "headings.scss";
-@import "body.scss";
-@import "paragraph.scss";
+@import "headings.css";
+@import "body.css";
+@import "paragraph.css";
+
 
 
 .container  {
   display: grid;
-  grid-template-rows: 150px 1fr 900px 150px;
+  grid-template-rows: 150px 1fr 300px 150px;
   grid-template-areas:
   "hd hd hd"
   "c1 c1 c1"
@@ -108,9 +109,9 @@ img {
     display: grid;
     grid-template-rows: 150px 1fr 100px;
     grid-template-areas:
-    "hd hd hd hd"
-    "c1 c1 c1 au"
-    "ft ft ft ft";
+    "hd hd"
+    "c1 au"
+    "ft ft";
     grid-gap: 15px;
     }
 
@@ -130,7 +131,15 @@ img {
     justify-content: flex-start;
     }
 
-  #four {
+  #one {
+    grid-area: c1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: space-between;*/
+    }
+
+  #tripname {
     grid-area: au;
     display: flex;
     justify-content: flex-start;
