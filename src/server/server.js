@@ -6,38 +6,35 @@ var bodyParser = require('body-parser')
 var cors = require('cors')
 const fetch = require('node-fetch')
 
-// Setup empty JS object to act as endpoint for all routes
-projectData = {};
+const app = express()
+app.use(cors())
+// to use json
+app.use(bodyParser.json())
+// to use url encoded values
+app.use(bodyParser.urlencoded({ extended: false }))
 
-// Start up an instance of app
-const app = express();
-
-//Here we are configuring express to use body-parser as middle-ware.
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
-// Cors for cross origin allowance
-app.use(cors());
-
-// Initialize the main project folder
 app.use(express.static('dist'));
 
-// // Spin up the server
-app.listen(8090, function () {
-    console.log('App successfully listening on port 8090!')
+app.get('/', function (req, res) {
+    res.sendFile('dist/index.html')
+    //res.sendFile(path.resolve('src/client/views/index.html'))
 })
 
-// Initialize all route with a callback function
-app.get('/all', sendData);
-function sendData (req, res) {
-  res.send(projectData);
-};
+app.get('/test', function (req, res) {
+    res.send(mockAPIResponse)
+})
 
-// Post Route
-app.post('/add', addData);
-function addData(req, res) {
-  projectData.date = req.body.date;
-  projectData.temp = req.body.temperature;
-  projectData.user = req.body.user;
-  console.log(projectData);
-}
+app.listen(8010, function () {
+    console.log('App successfully listening on port 8010!')
+})
+
+let text = []
+const apiKey = process.env.API_KEY
+app.post('/api', async function(req, res) {
+    text = req.body.name;
+    const response = await fetch('https://api.meaningcloud.com/sentiment-2.1?key=' + apiKey + '&lang=en&txt=' + text)
+    console.log('Your API key is ' + apiKey)
+    const addData = await response.json()
+    console.log(addData)
+    res.send(addData)
+})
