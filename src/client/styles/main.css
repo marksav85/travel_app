@@ -9,19 +9,17 @@
 }
 
 .destination-container {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-  transition: 0.3s;
-  text-align: center;
-  background-color: #f7f7f8;
-  height: 50%;
-}
-
-.destination-container {
   display: flex;
   flex-direction: row;
   text-align: center;
   justify-content: space-around;
   align-items: center;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  text-align: center;
+  background-color: #f7f7f8;
+  height: 300px;
 }
 
 img {
@@ -29,130 +27,15 @@ img {
   max-height: auto;
 }
 
-.author {
+.weather-container {
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   transition: 0.3s;
+  margin: 10px;
   padding: 20px;
   background-color: #f7f7f8;
   align-items: center;
   justify-content: space-between;
+  height: 300px;
 }
-
-/*.avatar {
-  width: 200px;
-  height: auto;
-  border-radius: 50%;
-  text-align: center;
-}*/
-
-#company {
-  color: #dd3131;
-}
-
-#country {
-  color: #ffae0c;
-}
-
-/*.sm_icons {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 80%;
-  height: 100px;
-}
-
-.icon  {
-  width: 10%;
-  height: auto;
-  margin: 15px;
-}*/
-
-#header {
-  grid-area: hd;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-#one {
-  grid-area: c1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-#four {
-  grid-area: au;
-  display: flex;
-  justify-content: space-around;
-}
-
-#footer {
-  grid-area: ft;
-  display: flex;
-  justify-content: space-around;
-}
-
-/* @media (min-width: 900px) {
-  .container {
-    display: grid;
-    grid-template-rows: 150px 1fr 100px;
-    grid-template-areas:
-      "hd hd"
-      "c1 au"
-      "ft ft";
-    grid-gap: 15px;
-  }
-
-  .avatar {
-    width: 250px;
-    height: auto;
-    text-align: center;
-    }
-
-  .author {
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-    transition: 0.3s;
-    padding: 20px;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  #one {
-    grid-area: c1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  #tripname {
-    grid-area: au;
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  .sm_icons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 80%;
-    height: 150px;
-  }
-
-  .icon  {
-    width: 15%;
-    height: auto;
-    margin: 15px;
-  }
-
-  .bio {
-    margin-bottom: 100px;
-  }
-} */
