@@ -6,7 +6,7 @@ body {
   line-height: 1.75;
 }
 
-@media (min-width:900px) {
+@media (min-width: 900px) {
   body {
     padding: 20px;
     font-family: sans-serif;
@@ -14,3 +14,4 @@ body {
     font-size: 1vw;
     line-height: 1.75;
   }
+}
