@@ -1,5 +1,6 @@
 .destination-form {
-  max-width: 400px;
+  max-width: 80%;
+  height: 40vh;
   margin: 20px auto;
   padding: 20px;
   background-color: #ffffff;

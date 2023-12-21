@@ -1,0 +1,42 @@
+.weather-display {
+  max-width: 80%;
+  height: 40vh;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Title styles */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Weather details styles */
+#weather-details {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Date styles */
+#date {
+  margin-bottom: 10px;
+}
+
+/* Temperature styles */
+#temp {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+/* Content styles */
+#content {
+  margin-bottom: 20px;
+}
