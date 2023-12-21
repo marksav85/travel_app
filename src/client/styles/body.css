@@ -6,13 +6,3 @@ body {
   line-height: 1.75;
   background: linear-gradient(to bottom, #4687a3, #d17ed1);
 }
-
-@media (min-width: 900px) {
-  body {
-    padding: 20px;
-    font-family: sans-serif;
-    color: #222;
-    font-size: 1vw;
-    line-height: 1.75;
-  }
-}
