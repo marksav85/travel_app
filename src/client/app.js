@@ -9,7 +9,7 @@ const fetch = require("node-fetch");
 const app = express();
 
 // Initialize the main project folder
-app.use(express.static("public"));
+app.use(express.static("client"));
 
 // Setup Server
 const port = 8000;
