@@ -1,36 +1,18 @@
-// Setup empty JS object to act as endpoint for all routes
-projectData = {};
+document
+  .getElementById("weatherForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
 
-// Require Express to run server and routes
-const express = require("express");
-//
-const fetch = require("node-fetch");
-// Start up an instance of app
-const app = express();
-
-// Initialize the main project folder
-app.use(express.static("client"));
-
-// Setup Server
-const port = 8000;
-const server = app.listen(port, listening);
-function listening() {
-  console.log("running on localhost: " + port);
-  console.log("server running successfully!");
-}
-
-// GET route
-app.get("weather", async (req, res) => {
-  try {
-    const apiKey = "";
-    const city = req.query.city || "Berlin"; //Berlin is default city
-    const apiUrl =
-      req.query.apiUrl ||
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-    res.json(data);
-  } catch (err) {
-    console.log("Error fetching weather data:", err);
-  }
-});
+    const city = document.getElementById("city").value;
+    fetch(`/weather?city=${city}`)
+      .then((response) => response.json())
+      .then((data) => {
+        const weatherDetails = document.getElementById("weather-details");
+        weatherDetails.innerHTML = `
+          <h2>Weather in ${data.name}, ${data.sys.country}</h2>
+          <p>Temperature: ${data.main.temp} °C</p>
+          <p>Weather: ${data.weather[0].description}</p>
+        `;
+      })
+      .catch((error) => console.error("Error fetching weather data:", error));
+  });
