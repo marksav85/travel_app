@@ -1,40 +1,39 @@
-const dotenv = require('dotenv');
-dotenv.config();
-var path = require('path')
-const express = require('express')
-var bodyParser = require('body-parser')
-var cors = require('cors')
-const fetch = require('node-fetch')
+// Setup empty JS object to act as endpoint for all routes
+projectData = {};
 
-const app = express()
-app.use(cors())
-// to use json
-app.use(bodyParser.json())
-// to use url encoded values
-app.use(bodyParser.urlencoded({ extended: false }))
+// Require Express to run server and routes
+const express = require("express");
+//
+const fetch = require("node-fetch");
+// Start up an instance of app
+const app = express();
+// Import API key as environment variable
+require("dotenv").config();
+const apiKey = process.env.API_KEY;
 
-app.use(express.static('dist'));
+// Initialize the main project folder
+app.use(express.static("client"));
 
-app.get('/', function (req, res) {
-    res.sendFile('dist/index.html')
-    //res.sendFile(path.resolve('src/client/views/index.html'))
-})
+// GET route
+app.get("weather", async (req, res) => {
+  try {
+    const apiKey = "";
+    //const city = req.query.city || "Berlin"; //Berlin is default city
+    const apiUrl =
+      req.query.apiUrl ||
+      `https://api.openweathermap.org/data/3.0/onecall?lat={52}&lon={13}&appid=${apiKey}`;
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    res.json(data);
+  } catch (err) {
+    console.log("Error fetching weather data:", err);
+  }
+});
 
-app.get('/test', function (req, res) {
-    res.send(mockAPIResponse)
-})
-
-app.listen(8010, function () {
-    console.log('App successfully listening on port 8010!')
-})
-
-let text = []
-const apiKey = process.env.API_KEY
-app.post('/api', async function(req, res) {
-    text = req.body.name;
-    const response = await fetch('https://api.meaningcloud.com/sentiment-2.1?key=' + apiKey + '&lang=en&txt=' + text)
-    console.log('Your API key is ' + apiKey)
-    const addData = await response.json()
-    console.log(addData)
-    res.send(addData)
-})
+// Setup Server
+const port = 8000;
+const server = app.listen(port, listening);
+function listening() {
+  console.log("running on localhost: " + port);
+  console.log("server running successfully!");
+}
