@@ -8,6 +8,8 @@ module.exports = {
   output: {
     libraryTarget: "var",
     library: "Client",
+    filename: "app.js", // Specify the correct output filename
+    path: path.resolve("/", "dist"), // Adjust the path as needed
   },
   mode: "development",
   devtool: "source-map",
