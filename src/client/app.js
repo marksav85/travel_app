@@ -10,9 +10,12 @@ document
       .then((data) => {
         console.log(data);
         const weatherDetails = document.getElementById("weather-details");
+        // Convert temperature from Kelvin to Celsius
+        const temperatureCelsius = data.main.temp - 273.15;
+        // toFixed rounds temperature down to 0 decimal places
         weatherDetails.innerHTML = `
           <h2>Weather in ${data.name}</h2>
-          <p>Temperature: ${data.main.temp} °C</p>
+          <p>Temperature: ${temperatureCelsius.toFixed(0)} °C</p> 
           <p>Weather: ${data.weather[0].description}</p>
         `;
       })
