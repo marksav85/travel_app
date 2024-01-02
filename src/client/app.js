@@ -7,7 +7,7 @@ document
     event.preventDefault();
 
     const city = document.getElementById("city").value;
-    fetch(`http://localhost:8000/weather?city=${city}`)
+    fetch(`/weather?city=${city}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
