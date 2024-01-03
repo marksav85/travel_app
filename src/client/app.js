@@ -7,7 +7,9 @@ document
     event.preventDefault();
 
     const city = document.getElementById("city").value;
-    fetch(`/weather?city=${city}`)
+    // Determine the base URL dynamically
+    const baseUrl = "http://localhost:8000";
+    fetch(`${baseUrl}/weather?city=${city}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
