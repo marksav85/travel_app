@@ -1,147 +1,92 @@
 body {
-  padding: 20px;
-  font-family: sans-serif;
-  color: #222;
-  line-height: 1.75;
   background: linear-gradient(to bottom, #4687a3, #d17ed1);
-}
-
-h1 {
-  font-size: 3vw;
   font-family: "Lato", sans-serif;
-  font-weight: normal;
-  font-style: italic;
-  text-align: center;
-  color: antiquewhite;
+  height: 100vh;
 }
-
-h2 {
-  font-size: 2vw;
-  font-family: "Lato", sans-serif;
-  text-align: center;
-  text-decoration: underline;
-}
-
-h5 {
-  padding: none;
-  text-align: center;
-}
-
-p {
-  font-family: "Open Sans", sans-serif;
-}
-
-/* HEADER STYLES */
 
 .header {
-  height: 10vh;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
 }
 
-/* CONTAINER STYLES */
-
-.container {
+.main-container {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
-  align-items: center;
-  height: 80vh;
+  flex-wrap: wrap;
+  padding: 2rem;
 }
 
-/* DESTINATION STYLES */
-
-.destination-container {
-  width: 40%;
-}
-
-.destination-form {
-  max-width: 80%;
-  height: 40vh;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
+.card {
+  width: 45%;
+  margin-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Input styles */
-.input {
-  width: 90%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  outline: none;
-  transition: border-color 0.3s;
+/* DESTINATION FORM SYTLES */
+
+.destination-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
 }
 
-.input:focus {
-  border-color: #3498db;
+.destination-form h3 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.destination {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
 }
 
 .start,
 .end {
   display: block;
   margin-bottom: 5px;
-  color: #333;
+  color: #495057;
 }
 
-/* Button styles */
+.input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
 #destination-button {
-  background-color: #3498db;
-  color: #fff;
-  padding: 10px 15px;
+  background-color: #007bff;
+  color: #ffffff;
   border: none;
+  padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
 #destination-button:hover {
-  background-color: #007bb5;
+  background-color: #0056b3;
 }
 
-/* WEATHER STYLES */
+/* WEATHER CARD STYLES */
 
-.weather-container {
-  width: 40%;
-}
-
-.weather-display {
-  max-width: 80%;
-  height: 40vh;
+.weather-card-body {
+  max-width: 400px;
+  margin: 0 auto;
   background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
   padding: 20px;
+  border-radius: 8px;
+}
+
+.weather-card-title {
   text-align: center;
-}
-
-/* Title styles */
-/* .title {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 15px;
-} */
-
-/* Weather details styles */
-#weather-details {
-  font-size: 16px;
-  color: #555;
-}
-
-/* Date styles */
-#date {
-  margin-bottom: 10px;
-}
-
-/* Temperature styles */
-#temp {
-  margin-bottom: 10px;
-}
-
-/* Content styles */
-#content {
+  color: #007bff;
   margin-bottom: 20px;
 }
