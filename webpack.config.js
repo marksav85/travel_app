@@ -13,6 +13,11 @@ module.exports = {
   mode: "development",
   devtool: "source-map",
   stats: "verbose",
+  /* devServer: {
+    contentBase: path.join(__dirname, "./dist"),
+    publicPath: "./dist",
+    port: 8080,
+  }, */
   module: {
     rules: [
       {
