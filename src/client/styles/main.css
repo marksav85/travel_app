@@ -90,3 +90,9 @@ body {
   color: #007bff;
   margin-bottom: 20px;
 }
+
+#weather-details {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
+}
