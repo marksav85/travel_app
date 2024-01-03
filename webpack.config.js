@@ -8,7 +8,7 @@ module.exports = {
     libraryTarget: "var",
     library: "Client",
     filename: "bundle.js", // Specify the correct output filename
-    path: path.resolve("/", "dist"), // Adjust the path as needed
+    path: path.resolve(__dirname, "./dist"), // Adjust the path as needed
   },
   mode: "development",
   devtool: "source-map",
