@@ -7,45 +7,50 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
-    <link href="../styles/main.css" rel="stylesheet" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header"><h1>My Travel Journal</h1></header>
-    <div class="container">
-      <div class="destination-container" id="destination-container">
-        <form class="destination-form" id="destination-form">
-          <h3>Where to?</h3>
-          <input
-            id="city"
-            type="text"
-            name="city"
-            class="destination input"
-            placeholder="destination"
-          />
-          <label for="start" class="start">Start:</label>
-          <input type="date" id="start" name="start" class="start input" />
-          <label for="end" class="end">End:</label>
-          <input type="date" id="end" name="end" class="end input" />
-          <button id="destination-button" type="submit">Submit</button>
-        </form>
+    <div class="container main-container">
+      <!-- destination container -->
+      <div class="card">
+        <div class="card-body">
+          <form class="destination-form" id="destination-form">
+            <h3>Where to?</h3>
+            <input
+              id="city"
+              type="text"
+              name="city"
+              class="destination input"
+              placeholder="destination"
+            />
+            <label for="start" class="start">Start:</label>
+            <input type="date" id="start" name="start" class="start input" />
+            <label for="end" class="end">End:</label>
+            <input type="date" id="end" name="end" class="end input" />
+            <button id="destination-button" type="submit">Submit</button>
+          </form>
+        </div>
       </div>
-      <div class="weather-container" id="weather-container">
-        <div class="weather-display">
-          <div class="title"><h3>How's the weather?</h3></div>
+      <!-- weather container -->
+      <div class="card">
+        <div class="weather-card-body">
+          <div class="weather-card-title"><h3>How's the weather?</h3></div>
           <div id="weather-details">
             <div>
-              <img id="weather-icon" src="" alt="weather icon" />
+              <img id="weather-icon" />
             </div>
           </div>
         </div>
       </div>
     </div>
-    <footer>
-      <div class="footer" id="footer">
-        <a href=""></a>
-      </div>
-    </footer>
     <!-- <script src="../app.js"></script> -->
     <script src="./bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   </body>
 </html>
