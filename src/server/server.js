@@ -23,12 +23,19 @@ app.listen(port, () => {
 });
 // Store environment variable API key in variable
 const apiKey = process.env.API_KEY;
-
 // GET route
 app.get("/weather", async (req, res) => {
   try {
+    // Obtain city name from app.js user input
     const city = req.query.city || "Berlin"; // Default city is Berlin
+    // Geocoding API request to obtain latitude and longitude
+    /* const geocodingUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`;
+    const geocodingResponse = await fetch(geocodingUrl);
+    const geocodingData = await geocodingResponse.json();
+    console.log(geocodingata); */
+
     const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+
     const response = await fetch(apiUrl);
     const data = await response.json();
     res.json(data);
