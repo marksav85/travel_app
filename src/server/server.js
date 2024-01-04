@@ -29,7 +29,9 @@ app.get("/weather", async (req, res) => {
     // Obtain city name from app.js user input
     const city = req.query.city || "Berlin"; // Default city is Berlin
     // Obtain date from app.js user input
-    const date = req.query.date || new Date(); // Default date is today
+    const currentDate = new Date().toISOString().slice(0, 10); // Gets todays date and slices YYYY-MM-DD
+    const date = req.query.date || currentDate; // Default date is today
+    console.log(currentDate);
     // Geocoding API request to obtain latitude and longitude from city name
     const geocodingUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`;
     const geocodingResponse = await fetch(geocodingUrl);
