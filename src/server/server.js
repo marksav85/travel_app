@@ -28,11 +28,13 @@ app.get("/weather", async (req, res) => {
   try {
     // Obtain city name from app.js user input
     const city = req.query.city || "Berlin"; // Default city is Berlin
+    // Obtain date from app.js user input
+    const date = req.query.date || new Date(); // Default date is today
     // Geocoding API request to obtain latitude and longitude from city name
     const geocodingUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`;
     const geocodingResponse = await fetch(geocodingUrl);
     const geocodingData = await geocodingResponse.json();
-    console.log(geocodingData);
+    /* console.log(geocodingData); */
     // Extract latitude and longitude from the Geocoding API response
     const latitude = geocodingData[0].lat;
     const lat = latitude.toFixed(0);
@@ -40,12 +42,12 @@ app.get("/weather", async (req, res) => {
     const lon = longitude.toFixed(0);
     // OpenWeather API request using the obtained latitude and longitude
     /* const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`; */
-    const openWeatherUrl = `https://api.openweathermap.org/data/3.0/onecall/day_summary?lat=${lat}&lon=${lon}&date=2024-03-30&tz=+03:00&appid=${apiKey}`;
+    const openWeatherUrl = `https://api.openweathermap.org/data/3.0/onecall/day_summary?lat=${lat}&lon=${lon}&date=${date}&appid=${apiKey}`;
     console.log(openWeatherUrl);
     const openWeatherResponse = await fetch(openWeatherUrl);
     const openWeatherData = await openWeatherResponse.json();
     res.json(openWeatherData);
-    console.log(openWeatherData);
+    /* console.log(openWeatherData); */
   } catch (err) {
     console.log("Error fetching weather data:", err);
     res.status(500).send("Internal Server Error");
