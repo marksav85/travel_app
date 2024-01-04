@@ -18,14 +18,16 @@ document
         // Get weather ids to update UI
         const weatherDetails = document.getElementById("weather-details");
         const weatherCity = document.getElementById("weather-city");
+        const weatherDate = document.getElementById("weather-date");
         const weatherTemperature = document.getElementById(
           "weather-temperature"
         );
         const weatherClouds = document.getElementById("weather-clouds");
         const weatherRainfall = document.getElementById("weather-rainfall");
         /* const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`; */
-        // Update UI with city name
+        // Update UI with city name and date
         weatherCity.innerHTML = `<h3>${city}</h3>`;
+        weatherDate.innerHTML = `<h4>${data.date}</h4>`;
         // Convert temperature from Kelvin to Celsius (toFixed rounds temperature down to 0 decimal places)
         const temperatureCelsius = data.temperature.afternoon - 273.15;
         weatherTemperature.innerHTML = `<h4>Daytime temperature: ${temperatureCelsius.toFixed(
