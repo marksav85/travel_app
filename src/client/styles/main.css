@@ -17,10 +17,31 @@ body {
   padding: 2rem;
 }
 
+/* CARD STYLES */
+
 .card {
   width: 45%;
   margin-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
+  height: 20vh;
+}
+
+.card-body {
+  height: 40vh;
+}
+
+.card-footer {
+  text-align: center;
+  color: #007bff;
+  margin-top: 20px;
+  padding: 5px;
+  height: 10vh;
 }
 
 /* DESTINATION FORM SYTLES */
@@ -77,18 +98,12 @@ body {
 
 /* WEATHER CARD STYLES */
 
-.weather-card-body {
+#weather-card-body {
   max-width: 400px;
   margin: 0 auto;
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
-}
-
-.weather-card-title {
-  text-align: center;
-  color: #007bff;
-  margin-bottom: 20px;
 }
 
 #weather-details {
