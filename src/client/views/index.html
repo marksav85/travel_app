@@ -19,7 +19,7 @@
       <div class="card">
         <div class="card-body">
           <form class="destination-form" id="destination-form">
-            <h3>Where to?</h3>
+            <h3>Where would you like to go to?</h3>
             <input
               id="city"
               type="text"
@@ -27,10 +27,9 @@
               class="destination input"
               placeholder="destination"
             />
-            <label for="start" class="start">Start:</label>
+            <label for="start" class="start">Date of travel:</label>
             <input type="date" id="start" name="start" class="start input" />
-            <label for="end" class="end">End:</label>
-            <input type="date" id="end" name="end" class="end input" />
+
             <button id="destination-button" type="submit">Submit</button>
           </form>
         </div>
@@ -40,8 +39,12 @@
         <div class="weather-card-body">
           <div class="weather-card-title"><h3>How's the weather?</h3></div>
           <div id="weather-details">
+            <div class="weather-conditions">Typical weather conditions:</div>
             <div>
               <img id="weather-icon" />
+            </div>
+            <div class="disclaimer">
+              30 Day forecast or analysis of historical weather data
             </div>
           </div>
         </div>
