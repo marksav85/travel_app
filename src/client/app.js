@@ -1,11 +1,10 @@
-// add event listener to submit button
 import "./styles/main.css";
-
+// add event listener to submit button
 document
   .getElementById("destination-form")
   .addEventListener("submit", function (event) {
     event.preventDefault();
-
+    // Get the city name from the input field
     const city = document.getElementById("city").value;
     // Determine the base URL dynamically
     const baseUrl = "http://localhost:8000";
@@ -13,21 +12,24 @@ document
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        // Get weather ids to update UI
         const weatherDetails = document.getElementById("weather-details");
+        const weatherCity = document.getElementById("weather-city");
+        const weatherTemperature = document.getElementById(
+          "weather-temperature"
+        );
+        const weatherType = document.getElementById("weather-type");
         const weatherIcon = document.getElementById("weather-icon");
         const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
-        // Convert temperature from Kelvin to Celsius
+        // Update UI with weather data
+        weatherCity.innerHTML = `<h3>${data.name}</h3>`;
+        // Convert temperature from Kelvin to Celsius (toFixed rounds temperature down to 0 decimal places)
         const temperatureCelsius = data.main.temp - 273.15;
-        // toFixed rounds temperature down to 0 decimal places
-        weatherDetails.innerHTML = `
-          <h3>${data.name}</h3>
-          <h4>Temperature: ${temperatureCelsius.toFixed(0)} °C</h4> 
-          <h4>Weather: ${data.weather[0].description}</h4>
-          <img src="${iconUrl}" alt="Weather Icon">
-        `;
-        weatherIcon.innerHTML = `
-          <img src="${iconUrl}" alt="Weather Icon">
-        `;
+        weatherTemperature.innerHTML = `<h4>Temperature: ${temperatureCelsius.toFixed(
+          0
+        )} °C</h4>`;
+        weatherType.innerHTML = `<h4>Weather: ${data.weather[0].description}</h4>`;
+        weatherIcon.innerHTML = `<img src="${iconUrl}" alt="Weather Icon">`;
       })
       .catch((error) => console.error("Error fetching weather data:", error));
   });
