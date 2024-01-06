@@ -30,7 +30,6 @@ body {
   justify-content: center;
   align-items: center;
   color: #007bff;
-  margin-bottom: 20px;
   height: 20vh;
 }
 
@@ -44,7 +43,7 @@ body {
   align-items: center;
   color: #007bff;
   margin-top: 20px;
-  padding: 5px;
+  padding: 10px;
   height: 10vh;
 }
 
@@ -52,6 +51,12 @@ body {
   font-size: 12px;
   color: #666;
   bottom: 10px;
+}
+
+@media screen and (max-width: 991px) {
+  .footer-text {
+    font-size: 10px;
+  }
 }
 
 /* DESTINATION FORM SYTLES */
