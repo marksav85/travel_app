@@ -23,13 +23,13 @@ body {
   width: 45%;
   margin-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #cf7ed0;
 }
 
 .card-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #007bff;
   height: 20vh;
 }
 
@@ -114,13 +114,13 @@ body {
 #weather-card-body {
   max-width: 400px;
   margin: 0 auto;
-  background-color: #ffffff;
+
   padding: 20px;
   border-radius: 8px;
 }
 
 #weather-details {
   text-align: center;
-  color: #007bff;
+
   margin-bottom: 20px;
 }
