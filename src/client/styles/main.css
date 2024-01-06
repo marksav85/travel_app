@@ -25,6 +25,8 @@ body {
   ); 
 } */
 
+/* HEADER STYLES */
+
 .header {
   display: flex;
   flex-direction: column;
@@ -45,6 +47,8 @@ body {
 header h6 {
   margin: 0;
 }
+
+/* CONTAINER STYLES */
 
 #main-container {
   display: flex;
@@ -99,7 +103,7 @@ header h6 {
   }
 }
 
-/* DESTINATION FORM SYTLES */
+/* DESTINATION FORM STYLES */
 
 .destination-form {
   max-width: 400px;
