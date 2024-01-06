@@ -30,7 +30,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #f7ab4d;
-  height: 20vh;
+  height: 15vh;
   color: white;
   padding: 1rem;
   text-align: center;
@@ -52,7 +52,7 @@ body {
   width: 45%;
   margin-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #cf7ed0;
+  background: linear-gradient(to bottom right, #73d7ff, #55ceff);
 }
 
 .card-header {
