@@ -78,6 +78,10 @@ header h6 {
 }
 
 .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 40vh;
   padding: 0;
 }
@@ -158,13 +162,15 @@ header h6 {
 /* WEATHER CARD STYLES */
 
 #weather-card-body {
-  max-width: 400px;
-  border-radius: 8px;
-  padding: 0;
+  padding: 20px;
   margin: 0;
 }
 
 #weather-details {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  text-align: start;
   margin-bottom: 20px;
 }
