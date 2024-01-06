@@ -1,5 +1,6 @@
 body {
   background: linear-gradient(to bottom, #4687a3, #d17ed1);
+  color: #ffffff;
   font-family: "Lato", sans-serif;
   height: 100vh;
 }
@@ -31,6 +32,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 20vh;
+  border-bottom: none;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .card-body {
@@ -41,9 +44,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  border-top: none;
   padding: 10px;
   height: 10vh;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .footer-text {
@@ -63,7 +67,7 @@ body {
 .destination-form {
   max-width: 400px;
   margin: 0 auto;
-  background-color: #ffffff;
+
   padding: 20px;
   border-radius: 8px;
 }
