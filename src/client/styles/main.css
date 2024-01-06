@@ -48,6 +48,12 @@ body {
   height: 10vh;
 }
 
+.footer-text {
+  font-size: 12px;
+  color: #666;
+  bottom: 10px;
+}
+
 /* DESTINATION FORM SYTLES */
 
 .destination-form {
