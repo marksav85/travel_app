@@ -22,6 +22,7 @@ document
         const weatherTemperature = document.getElementById(
           "weather-temperature"
         );
+        const weatherCard = document.getElementById("weather-card");
         const weatherClouds = document.getElementById("weather-clouds");
         const weatherRainfall = document.getElementById("weather-rainfall");
         /* const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`; */
@@ -80,11 +81,33 @@ document
         // Update UI with formatted date
         weatherDate.innerHTML = `<h4>${formattedDate}</h4>`;
 
-        // Convert temperature from Kelvin to Celsius (toFixed rounds temperature down to 0 decimal places)
-        const temperatureCelsius = data.temperature.afternoon - 273.15;
-        weatherTemperature.innerHTML = `<h4>Daytime temperature: ${temperatureCelsius.toFixed(
-          0
-        )} °C</h4>`;
+        // Update UI with temperature
+        const convertTemperature = data.temperature.afternoon - 273.15; // Convert temperature from Kelvin to Celsius
+        const temperatureCelsius = convertTemperature.toFixed(0); // Round temperature down to 0 decimal places
+        weatherTemperature.innerHTML = `<h4>Daytime temperature: ${temperatureCelsius} °C</h4>`;
+        // Temperature description variables
+        const hot =
+          "background: linear-gradient(to bottom right, #ff0000, #ff9900);";
+        const warm =
+          "background: linear-gradient(to bottom right, #ff9900, #ffff00);";
+        const mild =
+          "background: linear-gradient(to bottom right, #ffff00, #3399ff);";
+        const cold =
+          "background: linear-gradient(to bottom right, #3399ff, #66ccff);";
+        const freezing =
+          "background: linear-gradient(to bottom right, #66ccff, #CF7ED0);";
+
+        if (temperatureCelsius >= 30) {
+          weatherCard.setAttribute("style", `${hot};`);
+        } else if (temperatureCelsius >= 20) {
+          weatherCard.setAttribute("style", `${warm};`);
+        } else if (temperatureCelsius >= 10) {
+          weatherCard.setAttribute("style", `${mild};`);
+        } else if (temperatureCelsius >= 0) {
+          weatherCard.setAttribute("style", `${cold};`);
+        } else {
+          weatherCard.setAttribute("style", `${freezing};`);
+        }
 
         // Update UI with cloud cover potential
         const cloudCoverPercentage = data.cloud_cover.afternoon;
