@@ -9,8 +9,8 @@ document
     function capitalize(str) {
       return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
     }
-    const cityCapitalized = capitalize(city);
-
+    const cityCapitalized = capitalize(city); //capitalizes first letter of city name
+    // Get the date from the input field
     const date = document.getElementById("travel-date").value;
     console.log(date);
 
@@ -141,7 +141,43 @@ document
         } else {
           weatherRainfall.innerHTML = "<h4>Torrential</h4>";
         }
-        /* weatherIcon.innerHTML = `<img src="${iconUrl}" alt="Weather Icon">`; */
+
+        // Update UI with weather icons
+        const weatherIcon = document.getElementById("weather-icon");
+        if (
+          cloudCoverPercentage < 20 &&
+          precipitationTotal < 2.5 &&
+          temperatureCelsius > 0
+        ) {
+          const iconUrl = require("./media/weather-icons/sun.svg");
+          weatherIcon.innerHTML = `<img src="${iconUrl.default}" alt="Weather Icon">`;
+        } else if (
+          cloudCoverPercentage < 60 &&
+          precipitationTotal < 2.5 &&
+          temperatureCelsius > 0
+        ) {
+          const iconUrl = require("./media/weather-icons/cloud_sun.svg");
+          weatherIcon.innerHTML = `<img src="${iconUrl.default}" alt="Weather Icon">`;
+        } else if (
+          cloudCoverPercentage < 100 &&
+          precipitationTotal < 2.5 &&
+          temperatureCelsius > 0
+        ) {
+          const iconUrl = require("./media/weather-icons/cloud.svg");
+          weatherIcon.innerHTML = `<img src="${iconUrl.default}" alt="Weather Icon">`;
+        } else if (precipitationTotal < 25 && temperatureCelsius > 0) {
+          const iconUrl = require("./media/weather-icons/light_rain.svg");
+          weatherIcon.innerHTML = `<img src="${iconUrl.default}" alt="Weather Icon">`;
+        } else if (precipitationTotal < 150 && temperatureCelsius > 0) {
+          const iconUrl = require("./media/weather-icons/rain.svg");
+          weatherIcon.innerHTML = `<img src="${iconUrl.default}" alt="Weather Icon">`;
+        } else if (precipitationTotal > 2.5 && temperatureCelsius < 0) {
+          const iconUrl = require("./media/weather-icons/cloud_snowflake.svg");
+          weatherIcon.innerHTML = `<img src="${iconUrl.default}" alt="Weather Icon">`;
+        } else {
+          const iconUrl = require("./media/weather-icons/snowflake.svg");
+          weatherIcon.innerHTML = `<img src="${iconUrl.default}" alt="Weather Icon">`;
+        }
       })
       .catch((error) => console.error("Error fetching weather data:", error));
   });

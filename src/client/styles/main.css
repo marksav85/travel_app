@@ -176,6 +176,12 @@ header h6 {
   margin-bottom: 20px;
 }
 
+#weather-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
 .weather-data {
   margin: 5px;
 }
