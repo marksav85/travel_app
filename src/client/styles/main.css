@@ -10,21 +10,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/* body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.25
-  ); 
-} */
-
 /* HEADER STYLES */
 
 .header {
@@ -65,7 +50,7 @@ header h6 {
   width: 45%;
   margin-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to bottom right, #73d7ff, #55ceff);
+  background: linear-gradient(to bottom right, #fcb0a3, #d86779);
 }
 
 .card-header {
@@ -81,10 +66,10 @@ header h6 {
 .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 40vh;
-  padding: 0;
+  height: 45vh;
+  padding: 0px;
+  margin: 0px;
 }
 
 .card-footer {
@@ -99,7 +84,8 @@ header h6 {
 
 .footer-text {
   font-size: 12px;
-  color: #666;
+  font-weight: bold;
+  color: #fff;
   bottom: 10px;
 }
 
@@ -114,21 +100,11 @@ header h6 {
 .destination-form {
   max-width: 400px;
   margin: 0 auto;
-
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.destination-form h3 {
-  text-align: center;
-  color: #007bff;
-  margin-bottom: 20px;
 }
 
 .destination {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
   border: 1px solid #ced4da;
   border-radius: 4px;
 }
@@ -136,13 +112,17 @@ header h6 {
 .travel-date {
   display: block;
   margin-bottom: 5px;
-  color: #495057;
+  font-weight: bold;
+}
+
+input {
+  margin-bottom: 20px;
 }
 
 .input[type="date"] {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   border: 1px solid #ced4da;
   border-radius: 4px;
 }
@@ -152,6 +132,7 @@ header h6 {
   color: #ffffff;
   border: none;
   padding: 10px 20px;
+  margin-top: 20px;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -162,8 +143,12 @@ header h6 {
 
 /* WEATHER CARD STYLES */
 
+#weather-card {
+  background-color: aquamarine;
+  background-image: url("../media/weather-icons/sun.svg");
+}
+
 #weather-card-body {
-  padding: 20px;
   margin: 0;
 }
 
@@ -187,11 +172,6 @@ header h6 {
   font-size: 1;
 }
 
-#weather-temperature {
-}
-
-#weather-clouds {
-}
-
-#weather-rainfall {
+#weather-footer-text {
+  visibility: hidden;
 }

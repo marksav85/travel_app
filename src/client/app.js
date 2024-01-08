@@ -30,10 +30,13 @@ document
         const weatherCard = document.getElementById("weather-card");
         const weatherClouds = document.getElementById("weather-clouds");
         const weatherRainfall = document.getElementById("weather-rainfall");
-        /* const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`; */
+        const weatherFooterText = document.getElementById(
+          "weather-footer-text"
+        );
+        weatherFooterText.setAttribute("style", `visibility: visible;`);
 
         // Update UI with city name
-        weatherCity.innerHTML = `<h3>${cityCapitalized}</h3>`;
+        weatherCity.innerHTML = `<h2>${cityCapitalized}</h2>`;
 
         // Covert date from YYYY-MM-DD to DD Month YYYY
         function formatDate(inputDate) {
@@ -133,13 +136,13 @@ document
         if (precipitationTotal < 1) {
           weatherRainfall.innerHTML = "<h5>Dry</h5>";
         } else if (precipitationTotal < 2.5) {
-          weatherRainfall.innerHTML = "<h5>Light</h5>";
+          weatherRainfall.innerHTML = "<h5>Light Rain</h5>";
         } else if (precipitationTotal < 25) {
-          weatherRainfall.innerHTML = "<h5>Moderate</h5>";
+          weatherRainfall.innerHTML = "<h5>Moderate Rain</h5>";
         } else if (precipitationTotal < 50) {
-          weatherRainfall.innerHTML = "<h5>Heavy</h5>";
+          weatherRainfall.innerHTML = "<h5>Heavy Rain</h5>";
         } else {
-          weatherRainfall.innerHTML = "<h5>Torrential</h5>";
+          weatherRainfall.innerHTML = "<h5>Torrential Rain</h5>";
         }
 
         // Update UI with weather icons
