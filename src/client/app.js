@@ -92,15 +92,15 @@ document
         weatherTemperature.innerHTML = `<h4>${temperatureCelsius} °C</h4>`;
         // Temperature description variables
         const hot =
-          "background: linear-gradient(to bottom right, #ff0000, #ff9900);";
+          "background: linear-gradient(to bottom right, #FF5733, #FD9728);";
         const warm =
-          "background: linear-gradient(to bottom right, #ff9900, #ffff00);";
+          "background: linear-gradient(to bottom right, #F0AE05, #FFD700);";
         const mild =
-          "background: linear-gradient(to bottom right, #ffff00, #3399ff);";
+          "background: linear-gradient(to bottom right, #FFD700, #4CAF50);";
         const cold =
-          "background: linear-gradient(to bottom right, #3399ff, #66ccff);";
+          "background: linear-gradient(to bottom right, #4CAF50, #3498DB);";
         const freezing =
-          "background: linear-gradient(to bottom right, #66ccff, #CF7ED0);";
+          "background: linear-gradient(to bottom right, #3498DB, #4B595E);";
 
         if (temperatureCelsius >= 30) {
           weatherCard.setAttribute("style", `${hot};`);
