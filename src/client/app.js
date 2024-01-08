@@ -6,6 +6,11 @@ document
     event.preventDefault();
     // Get the city name from the input field
     const city = document.getElementById("city").value || "Berlin";
+    function capitalize(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    }
+    const cityCapitalized = capitalize(city);
+
     const date = document.getElementById("travel-date").value;
     console.log(date);
 
@@ -28,7 +33,7 @@ document
         /* const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`; */
 
         // Update UI with city name
-        weatherCity.innerHTML = `<h3>${city}</h3>`;
+        weatherCity.innerHTML = `<h3>${cityCapitalized}</h3>`;
 
         // Covert date from YYYY-MM-DD to DD Month YYYY
         function formatDate(inputDate) {
