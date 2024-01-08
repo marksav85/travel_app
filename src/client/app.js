@@ -84,7 +84,7 @@ document
         // Update UI with temperature
         const convertTemperature = data.temperature.afternoon - 273.15; // Convert temperature from Kelvin to Celsius
         const temperatureCelsius = convertTemperature.toFixed(0); // Round temperature down to 0 decimal places
-        weatherTemperature.innerHTML = `<h4>Daytime temperature: ${temperatureCelsius} °C</h4>`;
+        weatherTemperature.innerHTML = `<h4>${temperatureCelsius} °C</h4>`;
         // Temperature description variables
         const hot =
           "background: linear-gradient(to bottom right, #ff0000, #ff9900);";
@@ -112,29 +112,29 @@ document
         // Update UI with cloud cover potential
         const cloudCoverPercentage = data.cloud_cover.afternoon;
         if (cloudCoverPercentage < 20) {
-          weatherClouds.innerHTML = "<h4>Cloud cover: Clear skies</h4>";
+          weatherClouds.innerHTML = "<h4>Clear skies</h4>";
         } else if (cloudCoverPercentage < 40) {
-          weatherClouds.innerHTML = "<h4>Cloud cover: Partly cloudy</h4>";
+          weatherClouds.innerHTML = "<h4>Partly cloudy</h4>";
         } else if (cloudCoverPercentage < 60) {
-          weatherClouds.innerHTML = "<h4>Cloud cover: Mostly cloudy</h4>";
+          weatherClouds.innerHTML = "<h4>Mostly cloudy</h4>";
         } else if (cloudCoverPercentage < 80) {
-          weatherClouds.innerHTML = "<h4>Cloud cover: Overcast</h4>";
+          weatherClouds.innerHTML = "<h4>Overcast</h4>";
         } else {
-          weatherClouds.innerHTML = "<h4>Cloud cover: Cloudy</h4>";
+          weatherClouds.innerHTML = "<h4>Cloudy</h4>";
         }
 
         // Update UI with rainfall potential
         const precipitationTotal = data.precipitation.total;
         if (precipitationTotal < 1) {
-          weatherRainfall.innerHTML = "<h4>Rainfall: Dry</h4>";
+          weatherRainfall.innerHTML = "<h4>Dry</h4>";
         } else if (precipitationTotal < 2.5) {
-          weatherRainfall.innerHTML = "<h4>Rainfall: Light</h4>";
+          weatherRainfall.innerHTML = "<h4>Light</h4>";
         } else if (precipitationTotal < 25) {
-          weatherRainfall.innerHTML = "<h4>Rainfall: Moderate</h4>";
+          weatherRainfall.innerHTML = "<h4>Moderate</h4>";
         } else if (precipitationTotal < 50) {
-          weatherRainfall.innerHTML = "<h4>Rainfall: Heavy</h4>";
+          weatherRainfall.innerHTML = "<h4>Heavy</h4>";
         } else {
-          weatherRainfall.innerHTML = "<h4>Rainfall: Torrential</h4>";
+          weatherRainfall.innerHTML = "<h4>Torrential</h4>";
         }
         /* weatherIcon.innerHTML = `<img src="${iconUrl}" alt="Weather Icon">`; */
       })
