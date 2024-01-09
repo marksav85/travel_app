@@ -9,6 +9,7 @@ module.exports = {
     library: "Client",
     filename: "bundle.js", // Specify the correct output filename
     path: path.resolve(__dirname, "./dist"), // Adjust the path as needed
+    publicPath: "./",
   },
   mode: "development",
   devtool: "source-map",
@@ -44,7 +45,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/client/views/index.html",
+      template: "./index.html",
       filename: "index.html",
       hash: true,
     }),
