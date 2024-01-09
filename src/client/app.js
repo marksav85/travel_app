@@ -20,7 +20,7 @@ document
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        // Get weather ids to update UI
+        // Set element variables
         const weatherDetails = document.getElementById("weather-details");
         const weatherCity = document.getElementById("weather-city");
         const weatherDate = document.getElementById("weather-date");
@@ -34,6 +34,9 @@ document
           "weather-footer-text"
         );
         weatherFooterText.setAttribute("style", `visibility: visible;`);
+        const errorMessageElement = document.getElementById("error-message");
+        //Hide error message if visible
+        errorMessageElement.classList.add("d-none");
 
         // Update UI with city name
         weatherCity.innerHTML = `<h2>${cityCapitalized}</h2>`;
@@ -182,5 +185,11 @@ document
           weatherIcon.innerHTML = `<img src="${iconUrl.default}" alt="Weather Icon">`;
         }
       })
-      .catch((error) => console.error("Error fetching weather data:", error));
+      .catch((error) => {
+        console.error("Error fetching weather data:", error);
+        // Update UI with error message
+        const errorMessageElement = document.getElementById("error-message");
+        errorMessageElement.textContent = "Location must be on planet Earth ;)";
+        errorMessageElement.classList.remove("d-none"); // Show the error message element
+      });
   });

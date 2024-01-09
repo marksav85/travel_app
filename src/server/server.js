@@ -36,6 +36,7 @@ app.get("/weather", async (req, res) => {
     const geocodingUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`;
     const geocodingResponse = await fetch(geocodingUrl);
     const geocodingData = await geocodingResponse.json();
+    console.log(geocodingData);
     /* console.log(geocodingData); */
     // Extract latitude and longitude from the Geocoding API response
     const latitude = geocodingData[0].lat;
