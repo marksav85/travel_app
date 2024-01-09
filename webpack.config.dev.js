@@ -1,24 +1,23 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./src/client/app.js",
   output: {
     libraryTarget: "var",
     library: "Client",
-    filename: "bundle.js", // Specify the correct output filename
-    path: path.resolve(__dirname, "./dist"), // Adjust the path as needed
-    publicPath: "./",
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "./dist"),
   },
   mode: "development",
   devtool: "source-map",
   stats: "verbose",
-  /* devServer: {
+  devServer: {
     contentBase: path.join(__dirname, "./dist"),
-    publicPath: "./dist",
+    publicPath: "/",
     port: 8080,
-  }, */
+    writeToDisk: true,
+  },
   module: {
     rules: [
       {
@@ -49,6 +48,5 @@ module.exports = {
       filename: "index.html",
       hash: true,
     }),
-    new CleanWebpackPlugin(),
   ],
 };
