@@ -17,9 +17,9 @@ require("dotenv").config();
 // Initialize the main project folder
 app.use(express.static("client"));
 // Setup Server
-const port = 8000;
+const port = process.env.PORT || 8000;
 app.listen(port, () => {
-  console.log(`Server listening on http://localhost:${port}`);
+  console.log(`Server started successfully: Server listening on port ${port}`);
 });
 // Store environment variable API key in variable
 const apiKey = process.env.API_KEY;

@@ -14,7 +14,7 @@ module.exports = {
   stats: "verbose",
   devServer: {
     contentBase: path.join(__dirname, "./dist"),
-    /* publicPath: "/", */
+    open: true,
     port: 8080,
     writeToDisk: true,
   },
