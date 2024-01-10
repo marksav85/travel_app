@@ -2,6 +2,8 @@
 const express = require("express");
 // Require Fetch
 const fetch = require("node-fetch");
+// require Path
+const path = require("path");
 // Start up an instance of app
 const app = express();
 // Middleware
@@ -30,7 +32,7 @@ app.get("*", (req, res) => {
 });
 
 // GET route
-app.get("weather", async (req, res) => {
+app.get("/weather", async (req, res) => {
   try {
     // Obtain city name from app.js user input
     const city = req.query.city || "Berlin"; // Default city is Berlin
