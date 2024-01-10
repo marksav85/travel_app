@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+/* const Dotenv = requier("dotenv-webpack"); */
 
 module.exports = {
   entry: "./src/client/app.js",
@@ -44,5 +45,8 @@ module.exports = {
       hash: true,
     }),
     new CleanWebpackPlugin(),
+    /* new Dotenv({
+      path: "./.env.production", // path to your .env.production file
+    }), */
   ],
 };
