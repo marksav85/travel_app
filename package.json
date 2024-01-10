@@ -9,7 +9,7 @@
     "start-client": "webpack --watch",
     "start-server": "nodemon ./src/server/server.js",
     "dev": "webpack serve  --config webpack.config.dev.js --mode development",
-    "build": "npm run build-prod && git add dist && git commit -m 'update production build' && git push origin main",
+    "build": "npm run build-prod",
     "build-prod": "webpack --config webpack.config.prod.js --mode production"
   },
   "homepage": "https://git.heroku.com/my-travel-weather-app.git",
