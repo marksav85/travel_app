@@ -15,7 +15,10 @@ document
     console.log(date);
 
     // Determine the base URL dynamically
-    const baseUrl = "http://localhost:8000";
+    const baseUrl =
+      process.env.NODE_ENV === "production"
+        ? "https://git.heroku.com/my-travel-weather-app.git"
+        : "http://localhost:8000"; // Update with your Heroku app name
     fetch(`${baseUrl}/weather?city=${city}&date=${date}`)
       .then((response) => response.json())
       .then((data) => {
