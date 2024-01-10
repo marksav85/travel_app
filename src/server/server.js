@@ -23,6 +23,12 @@ app.listen(port, () => {
 });
 // Store environment variable API key in variable
 const apiKey = process.env.API_KEY;
+
+// Serve the main HTML file for all routes
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
 // GET route
 app.get("/weather", async (req, res) => {
   try {
