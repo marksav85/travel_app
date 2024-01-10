@@ -14,10 +14,16 @@ module.exports = {
   stats: "verbose",
   devServer: {
     contentBase: path.join(__dirname, "./dist"),
-    publicPath: "/",
+    /* publicPath: "/", */
     port: 8080,
     writeToDisk: true,
   },
+  /* resolve: {
+    extensions: [".ts", ".js"],
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    }, 
+  },*/
   module: {
     rules: [
       {
