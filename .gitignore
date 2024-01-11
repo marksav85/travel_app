@@ -1,6 +1,5 @@
 node_modules
 .env
-src/client/media/weather-icons-master
 src/client/media/originals
 src/client/styles/bootstrap
 

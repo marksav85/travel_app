@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/client/app.js",
@@ -25,7 +26,7 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
         use: [
           {
             loader: "file-loader",
@@ -44,5 +45,8 @@ module.exports = {
       hash: true,
     }),
     new CleanWebpackPlugin(),
+    new CopyPlugin({
+      patterns: [{ from: "src/client/media", to: "media" }],
+    }),
   ],
 };
