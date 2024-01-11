@@ -17,7 +17,7 @@ app.use(cors());
 // Require dotenv for environment variable
 require("dotenv").config();
 // Initialize the main project folder
-app.use(express.static("client"));
+app.use(express.static("dist"));
 // Setup Server
 const port = process.env.PORT || 8000;
 app.listen(port, () => {
