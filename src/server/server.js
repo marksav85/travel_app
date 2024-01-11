@@ -27,9 +27,12 @@ app.listen(port, () => {
 const apiKey = process.env.API_KEY;
 
 // Serve the main HTML file for all routes
-/* app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "index.html"));
-}); */
+const projectRoot = path.resolve(__dirname, "..", "..");
+
+app.get("/weatjujujher", (req, res) => {
+  const indexPath = path.join(projectRoot, "index.html");
+  res.sendFile(indexPath);
+});
 
 // GET route
 app.get("/weather", async (req, res) => {
