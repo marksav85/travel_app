@@ -28,7 +28,7 @@ The data returned will consist of: city name, date, temperature (in Celsius), cl
 
 ## Implementation
 
-**Node** and **Express** packages are used for this build. After cloning the project, and installing Node.js, running _npm install_ from the terminal should install the relevant packages required. _Server.js_ contains the server-side logic, and the _client/app.js_ the client-side logic. Environment variables are used for the Open Weather API key, so any new setup will require a new API Key from OpenWeatherAPI and the key stored in a .env file.
+Built using **Node**, **Webpack** and **Express** packages . After cloning the project, and installing Node.js and Webpack, running _npm install_ from the terminal should install the relevant packages required. _Server.js_ contains the server-side logic, and the _client/app.js_ the client-side logic. _Npm start_ will begin the local server and development build in watch mode and _npm build_ will begin production build. Environment variables are used for the Open Weather API key, so any new setup will require a new API Key from OpenWeatherAPI and the key stored in a .env file.
 
 ## Extras
 
@@ -36,4 +36,8 @@ OpenWeatherMap.org Web API developer credentials
 
 ## Technologies used
 
-**HTML** ,**Bootstrap CSS**, **JavaScript**, **Node.js**, **Express**
+**HTML** ,**Bootstrap CSS**, **JavaScript**, **Node.js**, **Express**, **Webpack**
+
+## Live Preview
+
+[Check out the live site here: ](https://my-travel-weather-app-997ff38afb18.herokuapp.com/)
