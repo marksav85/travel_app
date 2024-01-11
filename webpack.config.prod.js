@@ -1,9 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const glob = require("glob");
-const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: "./src/client/app.js",
@@ -38,10 +35,6 @@ module.exports = {
           },
         ],
       },
-      {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
-      },
     ],
   },
   plugins: [
@@ -51,14 +44,5 @@ module.exports = {
       hash: true,
     }),
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin({
-      filename: "main.css",
-    }),
-    new PurgeCSSPlugin({
-      paths: [
-        path.join(__dirname, "index.html"),
-        path.join(__dirname, "src/**/*.js"),
-      ],
-    }),
   ],
 };
