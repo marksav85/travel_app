@@ -2,4 +2,9 @@ node_modules
 .env
 src/client/media/weather-icons-master
 src/client/media/originals
-src/client/styles/bootstrap.zip
+src/client/styles/bootstrap
+
+// Tree
+tree-files.txt
+tree-folders.txt
+tree-min.txt

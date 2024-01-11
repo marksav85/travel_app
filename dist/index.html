@@ -1,1 +1,106 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>Travel App</title><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5"/><link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/></noscript><script defer="defer" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script><script defer="defer" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script><script defer="defer" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script><script defer="defer" src="bundle.js?94cb11a6eec7d60e8593"></script></head><body><header class="header"><div><h1>My Travel App</h1></div><div><h6>The 3 W's of travelling: Where, When and Weather</h6></div></header><div class="container-fluid" id="main-container"><div class="card"><div class="card-header"><h2>Destination</h2></div><div id="destination-card-body" class="card-body"><form class="destination-form" id="destination-form"><input id="city" name="city" class="destination input" placeholder="destination eg. Berlin"/><div id="error-message" class="alert alert-danger d-none" role="alert"></div><label for="travel-date" class="travel-date">Date of travel:</label> <input type="date" id="travel-date" name="travel-date" class="travel-date input"/> <button id="destination-button" type="submit">Submit</button></form></div><div class="card-footer footer-text"><p>* historical weather data available up until 40+ years in the past<br/>* future forecast available for up to 1.5 years in the future</p></div></div><div class="card" id="weather-card"><div class="card-header" id="weather-header"><div id="weather-city"></div></div><div class="card-body" id="weather-card-body"><div id="weather-details"><div id="weather-date" class="weather-data"></div><div id="weather-temperature" class="weather-data"></div><div id="weather-clouds" class="weather-data"></div><div id="weather-rainfall" class="weather-data"></div><div id="weather-icon" class="weather-data"></div></div></div><div class="card-footer footer-text"><p id="weather-footer-text">* temperature, cloud and rainfall are measured as averages throughout the day</p></div></div></div><script defer="defer" src="./bundle.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Travel App</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5"
+    />
+    <!-- onload attribute is used to switch the rel attribute from "preload" to "stylesheet" when the stylesheet has finished loading. -->
+    <link
+      rel="preload"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <!-- <noscript> ensures that if JavaScript is disabled, the stylesheet is still applied. -->
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    /></noscript>
+    <!-- The defer attribute is added to allow scripts to be downloaded asynchronously without blocking the rendering of the page. -->
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    ></script>
+    <script
+      defer
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    ></script>
+  <script defer src="bundle.js?fb0ce829a646fc05bdbf"></script></head>
+
+  <body>
+    <header class="header">
+      <div><h1>My Travel App</h1></div>
+      <div><h6>The 3 W's of travelling: Where, When and Weather</h6></div>
+    </header>
+    <div class="container-fluid" id="main-container">
+      <!-- destination container -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Destination</h2>
+        </div>
+        <div id="destination-card-body" class="card-body">
+          <form class="destination-form" id="destination-form">
+            <input
+              id="city"
+              type="text"
+              name="city"
+              class="destination input"
+              placeholder="destination eg. Berlin"
+            />
+            <div
+              id="error-message"
+              class="alert alert-danger d-none"
+              role="alert"
+            ></div>
+            <label for="travel-date" class="travel-date">Date of travel:</label>
+            <input
+              type="date"
+              id="travel-date"
+              name="travel-date"
+              class="travel-date input"
+            />
+
+            <button id="destination-button" type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="card-footer footer-text">
+          <p>
+            * historical weather data available up until 40+ years in the
+            past<br />
+            * future forecast available for up to 1.5 years in the future
+          </p>
+        </div>
+      </div>
+      <!-- weather container -->
+      <div class="card" id="weather-card">
+        <div class="card-header" id="weather-header">
+          <div id="weather-city"></div>
+        </div>
+        <div class="card-body" id="weather-card-body">
+          <div id="weather-details">
+            <div id="weather-date" class="weather-data"></div>
+            <div id="weather-temperature" class="weather-data"></div>
+            <div id="weather-clouds" class="weather-data"></div>
+            <div id="weather-rainfall" class="weather-data"></div>
+            <div id="weather-icon" class="weather-data"></div>
+          </div>
+        </div>
+        <div class="card-footer footer-text">
+          <p id="weather-footer-text">
+            * temperature, cloud and rainfall are measured as averages
+            throughout the day
+          </p>
+        </div>
+      </div>
+    </div>
+    <script defer src="./bundle.js"></script>
+  </body>
+</html>
