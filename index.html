@@ -1,24 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Travel Journal</title>
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
+      content="width=device-width, initial-scale=1, maximum-scale=5"
     />
+    <!-- onload attribute is used to switch the rel attribute from "preload" to "stylesheet" when the stylesheet has finished loading. -->
     <link
+      rel="preload"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
-
-    <!-- <link rel="stylesheet" href="../styles/main.css" /> -->
+    <!-- <noscript> ensures that if JavaScript is disabled, the stylesheet is still applied. -->
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    /></noscript>
+    <!-- The defer attribute is added to allow scripts to be downloaded asynchronously without blocking the rendering of the page. -->
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    ></script>
+    <script
+      defer
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    ></script>
   </head>
+
   <body>
     <header class="header">
-      <h1>My Travel App</h1>
-      <br />
-      <h6>The 3 W's of travelling: Where, When and Weather</h6>
+      <div><h1>My Travel App</h1></div>
+      <div><h6>The 3 W's of travelling: Where, When and Weather</h6></div>
     </header>
     <div class="container-fluid" id="main-container">
       <!-- destination container -->
@@ -81,10 +101,6 @@
         </div>
       </div>
     </div>
-    <!-- <script src="../app.js"></script> -->
-    <script src="./bundle.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script defer src="./bundle.js"></script>
   </body>
 </html>

@@ -26,11 +26,7 @@ body {
 }
 
 .header h1 {
-  margin: 0;
-}
-
-header h6 {
-  margin: 0;
+  margin-bottom: 1rem;
 }
 
 /* CONTAINER STYLES */
