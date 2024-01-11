@@ -26,14 +26,6 @@ app.listen(port, () => {
 // Store environment variable API key in variable
 const apiKey = process.env.API_KEY;
 
-// Serve the main HTML file for all routes
-const projectRoot = path.resolve(__dirname, "..", "..");
-
-app.get("/weatjujujher", (req, res) => {
-  const indexPath = path.join(projectRoot, "index.html");
-  res.sendFile(indexPath);
-});
-
 // GET route
 app.get("/weather", async (req, res) => {
   try {
@@ -66,4 +58,12 @@ app.get("/weather", async (req, res) => {
     console.log("Error fetching weather data:", err);
     res.status(500).send("Internal Server Error");
   }
+});
+
+// Serve the main HTML file for all routes
+const projectRoot = path.resolve(__dirname, "..", "..");
+
+app.get("/*", (req, res) => {
+  const indexPath = path.join(projectRoot, "index.html");
+  res.sendFile(indexPath);
 });
