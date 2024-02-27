@@ -192,7 +192,7 @@ document
         console.error("Error fetching weather data:", error);
         // Update UI with error message
         const errorMessageElement = document.getElementById("error-message");
-        errorMessageElement.textContent = "Location must be on planet Earth ;)";
+        errorMessageElement.textContent = "Location not found";
         errorMessageElement.classList.remove("d-none"); // Show the error message element
       });
   });
