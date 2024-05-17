@@ -1,6 +1,7 @@
 {
   "name": "travel_app",
   "version": "1.0.0",
+  "type": "module",
   "description": "travel_app_project",
   "main": "./src/client/app.js",
   "engines": {
