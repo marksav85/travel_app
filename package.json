@@ -16,7 +16,7 @@
     "build": "npm run build-prod",
     "build-prod": "webpack --config webpack.config.prod.js --mode production"
   },
-  "homepage": "https://git.heroku.com/my-travel-weather-app.git",
+  "homepage": "https://travel-app-brtu.onrender.com/",
   "author": "",
   "license": "ISC",
   "dependencies": {
