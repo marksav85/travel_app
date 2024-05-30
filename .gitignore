@@ -3,7 +3,13 @@ node_modules
 src/client/media/originals
 src/client/styles/bootstrap
 
-// Tree
+# Tree
 tree-files.txt
 tree-folders.txt
 tree-min.txt
+
+# dist
+dist
+dist/bundle.js
+dist/bundle.js.map
+dist/index.html
