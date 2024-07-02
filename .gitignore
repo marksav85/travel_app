@@ -13,3 +13,6 @@ dist
 dist/bundle.js
 dist/bundle.js.map
 dist/index.html
+
+# originals
+src/client/media/originals
